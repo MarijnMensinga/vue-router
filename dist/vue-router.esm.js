@@ -335,21 +335,21 @@ var View = {
     data.routerViewDepth = depth;
 
     // render previous view if the tree is inactive and kept-alive
-    if (inactive) {
-      var cachedData = cache[name];
-      var cachedComponent = cachedData && cachedData.component;
-      if (cachedComponent) {
-        // #2301
-        // pass props
-        if (cachedData.configProps) {
-          fillPropsinData(cachedComponent, data, cachedData.route, cachedData.configProps);
-        }
-        return h(cachedComponent, data, children)
-      } else {
-        // render previous empty view
-        return h()
-      }
-    }
+//     if (inactive) {
+//       var cachedData = cache[name];
+//       var cachedComponent = cachedData && cachedData.component;
+//       if (cachedComponent) {
+//         // #2301
+//         // pass props
+//         if (cachedData.configProps) {
+//           fillPropsinData(cachedComponent, data, cachedData.route, cachedData.configProps);
+//         }
+//         return h(cachedComponent, data, children)
+//       } else {
+//         // render previous empty view
+//         return h()
+//       }
+//     }
 
     var matched = route.matched[depth];
     var component = matched && matched.components[name];
